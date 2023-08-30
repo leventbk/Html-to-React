@@ -1,4 +1,5 @@
 import React from "react";
+import tweet from "./tweet";
 
 function TweetList() {
   return (
@@ -7,17 +8,15 @@ function TweetList() {
     <section className="tweets">
       <article className="tweet">
         <header className="tweet--header">
-          <img className="tweet--avatar" src="https://i.imgur.com/73hZDYK.png"/>
-          <h2 className="tweet--name">Newton</h2>
-          <small className="tweet--handle">@SirIsaac</small>
+          <img className="tweet--avatar" src={tweet.avatar}/>
+          <h2 className="tweet--name">{tweet.name}</h2>
+          <small className="tweet--handle">{tweet.handle}</small>
         </header>
 
-        <div className="tweet--body">
-          <p>If I have seen further it is by standing on the shoulders of giants</p>
-        </div>
+        <div className="tweet--body">{tweet.body}</div>
 
         <footer className="tweet--footer">
-          <small className="footer--age">10 days ago<small>
+          <small className="footer--age">{tweet.age}<small>
               <span className="footer--actions">
                 <a href="#"><i className="fa fa-flag"></i></a>
                 <a href="#"><i className="fa fa-retweet"></i></a>
