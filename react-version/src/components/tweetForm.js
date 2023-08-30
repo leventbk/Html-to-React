@@ -1,6 +1,15 @@
 import React from "react";
 
 function TweetForm() {
+  function Button (){
+    const submit = (event) => {
+      event.preventDefault();
+      console.log("Button clicked!");
+    }
+    return (
+      <button onClick={submit} className="form__input">Tweet</button>
+    );
+  }
   const placeholder = "What are you humming about?";
   return (
     <main className="container">
@@ -8,7 +17,7 @@ function TweetForm() {
     <section className="newtweet">
       <form method="post" action="/tweets" className="newtweet__form">
         <textarea className="form__textarea" name="text" placeholder={placeholder}></textarea>
-        <input type="submit" value="Tweet" className="form__input"/>
+        <Button />
         <span className="form__counter">140</span>
       </form>
     </section>
