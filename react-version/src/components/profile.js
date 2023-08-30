@@ -1,7 +1,16 @@
 import React from "react";
 
 function Profile() {
-  return <h1>profile component</h1>;
+  return (
+    <aside>
+    <div class="profile">
+      <img class="profile__image" src="./profile-hex.png"/>
+    </div>
+    <div class="profile__name">
+      <h2><span class="profile--bold">Amy</span> Mansell</h2>
+    </div>
+  </aside>
+  );
 }
 
 export default Profile;
