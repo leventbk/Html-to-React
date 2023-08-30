@@ -8,12 +8,10 @@ import TweetList from './components/tweetList';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
 <Navigation/>
 <Profile/>
 <TweetForm/>
 <TweetList/>
-      </header>
     </div>
   );
 }
